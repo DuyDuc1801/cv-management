@@ -1,0 +1,15 @@
+.layout-default{
+    &__header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 100;
+    }
+    &__content{
+        margin-top: 100px;
+        min-height: 100vh;
+        background-color: rgb(246, 250, 255);
+        padding: 32px 0;
+    }
+}

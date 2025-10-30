@@ -1,0 +1,59 @@
+.footer{
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    padding: 0 20%;
+    & h4{
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    &__innerwrap{
+        padding: 48px 0;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ebebeb;
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__icon{
+        margin-right: 6px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        font-size: 20px;
+        background-color: white;
+        color: #4096ff;
+    }
+    &__title{
+        margin: 0;
+    }
+    &__slogan{
+        font-size: 14px;
+        color: #ebebeb;
+    }
+    &__item ul{
+        padding-left: 0;
+        list-style-type: none;
+        & a{
+            color: #ebebeb;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        & li{
+            margin-bottom: 4px;
+        }
+    }
+    &__copyright{
+        text-align: center;
+        color: #ebebeb;
+        font-size: 14px;
+        width: 100%;
+        background-color: #4096ff;
+        padding: 16px 0;
+    }
+}

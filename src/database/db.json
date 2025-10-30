@@ -1,0 +1,492 @@
+{
+  "cites": [
+    {
+      "key": 1,
+      "value": "Hà Nội"
+    },
+    {
+      "key": 2,
+      "value": "Hồ Chí Minh"
+    },
+    {
+      "key": 3,
+      "value": "Đà Nẵng"
+    },
+    {
+      "key": 4,
+      "value": "Hải Phòng"
+    },
+    {
+      "key": 5,
+      "value": "Cần Thơ"
+    },
+    {
+      "key": 6,
+      "value": "Biên Hòa"
+    },
+    {
+      "key": 7,
+      "value": "Nha Trang"
+    },
+    {
+      "key": 8,
+      "value": "Huế"
+    },
+    {
+      "key": 9,
+      "value": "Vũng Tàu"
+    },
+    {
+      "key": 10,
+      "value": "Quy Nhơn"
+    },
+    {
+      "key": 11,
+      "value": "Thái Nguyên"
+    },
+    {
+      "key": 12,
+      "value": "Đà Lạt"
+    }
+  ],
+  "cv": [
+    {
+      "id": 1,
+      "idCompany": 1,
+      "idJob": 4,
+      "name": "Le Van A",
+      "phone": "0123456789",
+      "email": "levana@gmail.com",
+      "statusRead": true,
+      "description": "Xin chào, tôi là Le Van A. Hiện tại tôi đang là...",
+      "linkProject": "",
+      "createAt": "29-04-2023 10:31:41",
+      "city": "Hà Nội"
+    },
+    {
+      "id": 2,
+      "idCompany": 1,
+      "idJob": 4,
+      "name": "Le Van E",
+      "phone": "0123456789",
+      "email": "levane@gmail.com",
+      "statusRead": true,
+      "description": "Xin chào, tôi là Le Van E. Hiện tại tôi đang là...",
+      "linkProject": "",
+      "createAt": "29-04-2023 10:32:41",
+      "city": "Hà Nội"
+    },
+    {
+      "id": 3,
+      "idCompany": 2,
+      "idJob": 2,
+      "name": "Nguyen Thi B",
+      "phone": "0987654321",
+      "email": "nguyenb@gmail.com",
+      "statusRead": false,
+      "description": "Tôi có 3 năm kinh nghiệm làm Backend Developer với NodeJS và Python. Đã tham gia nhiều dự án lớn...",
+      "linkProject": "github.com/nguyenb",
+      "createAt": "15-05-2023 14:20:15",
+      "city": "Hồ Chí Minh"
+    },
+    {
+      "id": 4,
+      "idCompany": 3,
+      "idJob": 3,
+      "name": "Tran Van C",
+      "phone": "0912345678",
+      "email": "tranvanc@gmail.com",
+      "statusRead": true,
+      "description": "Full Stack Developer với 4 năm kinh nghiệm MERN stack. Đam mê công nghệ và học hỏi...",
+      "linkProject": "portfolio.tranvanc.com",
+      "createAt": "02-06-2023 09:45:30",
+      "city": "Hồ Chí Minh"
+    },
+    {
+      "id": 5,
+      "idCompany": 1,
+      "idJob": 1,
+      "name": "Pham Thi D",
+      "phone": "0909123456",
+      "email": "phamthid@gmail.com",
+      "statusRead": false,
+      "description": "Frontend Developer chuyên về ReactJS và Angular. Có kinh nghiệm 2.5 năm...",
+      "linkProject": "github.com/phamthid",
+      "createAt": "10-06-2023 16:30:00",
+      "city": "Đà Nẵng"
+    },
+    {
+      "id": 6,
+      "idCompany": 4,
+      "idJob": 5,
+      "name": "Hoang Van F",
+      "phone": "0938765432",
+      "email": "hoangvanf@gmail.com",
+      "statusRead": true,
+      "description": "DevOps Engineer với 4 năm kinh nghiệm quản lý infrastructure trên AWS và Azure...",
+      "linkProject": "linkedin.com/in/hoangvanf",
+      "createAt": "08-07-2023 11:15:45",
+      "city": "Hà Nội"
+    },
+    {
+      "id": 7,
+      "idCompany": 2,
+      "idJob": 6,
+      "name": "Le Thi G",
+      "phone": "0945678901",
+      "email": "lethig@gmail.com",
+      "statusRead": false,
+      "description": "UI/UX Designer với portfolio đa dạng. Đã thiết kế cho nhiều startup và công ty lớn...",
+      "linkProject": "behance.net/lethig",
+      "createAt": "25-07-2023 08:40:20",
+      "city": "Hồ Chí Minh"
+    },
+    {
+      "id": 8,
+      "idCompany": 5,
+      "idJob": 7,
+      "name": "Vu Van H",
+      "phone": "0967890123",
+      "email": "vuvanh@gmail.com",
+      "statusRead": true,
+      "description": "Data Engineer có 3.5 năm kinh nghiệm xây dựng data pipeline với Spark và Airflow...",
+      "linkProject": "github.com/vuvanh",
+      "createAt": "15-08-2023 13:25:10",
+      "city": "Hà Nội"
+    },
+    {
+      "id": 9,
+      "idCompany": 3,
+      "idJob": 8,
+      "name": "Do Thi I",
+      "phone": "0923456789",
+      "email": "dothii@gmail.com",
+      "statusRead": false,
+      "description": "QA Engineer với kinh nghiệm automation testing, sử dụng Selenium và Cypress...",
+      "linkProject": "",
+      "createAt": "01-09-2023 10:50:30",
+      "city": "Đà Nẵng"
+    },
+    {
+      "id": 10,
+      "idCompany": 6,
+      "idJob": 9,
+      "name": "Bui Van K",
+      "phone": "0934567890",
+      "email": "buivank@gmail.com",
+      "statusRead": true,
+      "description": "System Analyst với 4 năm kinh nghiệm phân tích và thiết kế hệ thống cho các dự án banking...",
+      "linkProject": "linkedin.com/in/buivank",
+      "createAt": "18-09-2023 15:30:45",
+      "city": "Hà Nội"
+    },
+    {
+      "id": 11,
+      "idCompany": 4,
+      "idJob": 10,
+      "name": "Ngo Thi L",
+      "phone": "0956789012",
+      "email": "ngothil@gmail.com",
+      "statusRead": false,
+      "description": "Security Engineer với certification CEH, chuyên về penetration testing và security audit...",
+      "linkProject": "github.com/ngothil",
+      "createAt": "28-09-2023 09:15:20",
+      "city": "Hồ Chí Minh"
+    },
+    {
+      "id": 12,
+      "idCompany": 5,
+      "idJob": 11,
+      "name": "Dang Van M",
+      "phone": "0978901234",
+      "email": "dangvanm@gmail.com",
+      "statusRead": true,
+      "description": "Tech Lead với 6 năm kinh nghiệm VueJS, đã lead nhiều team và dự án thành công...",
+      "linkProject": "portfolio.dangvanm.dev",
+      "createAt": "12-10-2023 14:45:50",
+      "city": "Hà Nội"
+    }
+  ],
+  "jobs": [
+    {
+      "idCompany": 1,
+      "name": "Frontend Dev (Angular/ReactJS)",
+      "tags": ["ReactJS", "Angular", "TypeScript"],
+      "salary": "1000",
+      "description": "Top 3 Reasons To Join Us\nChance to grow up in your career path\nTalented and enthusiastic colleagues.\nAmazing new tech in Bigdata & AI\nJob Description\nTechcom Securities (TCBS) is seeking for a Front-end Developer to join our IT team based in Hanoi office. An ideal Front End Engineer would have 3+ years of experience in building highly scalable UI on the Web/Mobile.\nThis is your chance to become part of the leading innovative and reputable investment banking team in Vietnam!\nWe are looking for passionate, talented, and highly motivated hands-on Front End Developers with a creative edge, strong problem solving skills and strong on development fundamentals. We strive to maintain an open culture where everyone is a contributor and feels comfortable sharing ideas and opinions. Our team, drawn from the best product companies, is obsessive in its detailing and our focus is on awesome User Interaction.\nYour Skills and Experience\nRequired Skills:\nHighly skilled at front-end engineering using Object-Oriented JavaScript, various JavaScript libraries and micro frameworks (Angular/React, Prototype, Backbone), HTML and CSS\nWell versed in software engineering principles, frameworks and technologies\nExcellent communication skills\nSelf-directed team player who thrives in a continually changing environment\nShould Have:\nBuilds web/mobile software applications Follows coding standards, builds appropriate unit tests, integration tests and deployment scripts\nAssists in defining architectures Collaborates with teams to explore existing systems. Explains progress on the development effort\nTranslates designs and style guides provided by the UI/UX team into functional user interfaces, ensuring cross browser compatibility and performance\nContributes to continual improvement by suggesting improvements to user interface, software architecture or use of new technologies\nNice to have:\nComplete understanding of internal code library (jquery or any other)\nSome record of contribution to any front end open source project.\nWhy You'll Love Working Here\n- Review lương 1 lần/ năm\n- Cán bộ nhân viên sẽ có từ 12- 15 ngày phép/ năm \n- Bảo hiểm AON cho Cán bộ nhân viên\n- Công ty có các CLB thể thao sinh hoạt hàng tuần (đá bóng, chạy bộ, cầu lông)\n- Team building 1 lần/ 1 năm theo tiêu chuẩn 5 sao\n- Môi trường làm việc trẻ, năng động, cơ hội phát triển cao",
+      "status": true,
+      "createAt": "29-04-2023 21:22:17",
+      "id": 1,
+      "city": ["Đà Nẵng"],
+      "updateAt": "30-04-2023 14:12:25"
+    },
+    {
+      "idCompany": 2,
+      "name": "Backend Developer (NodeJS/Python)",
+      "tags": ["NodeJS", "Python", "Database"],
+      "salary": "1500",
+      "description": "Mô tả công việc\nPhát triển và bảo trì các API cho ứng dụng web/mobile\nTối ưu hóa hiệu suất database và server\nViết unit test và integration test\nTham gia code review và cải thiện code quality\n\nYêu cầu ứng viên\n2+ năm kinh nghiệm Backend development\nThành thạo NodeJS hoặc Python\nKinh nghiệm với SQL và NoSQL database\nHiểu biết về microservices architecture\n\nQuyền lợi\nLương cạnh tranh, thưởng theo dự án\n14 ngày phép năm\nBảo hiểm sức khỏe cao cấp\nĐào tạo và phát triển kỹ năng",
+      "status": true,
+      "createAt": "15-05-2023 09:30:00",
+      "id": 2,
+      "city": ["Hà Nội", "Hồ Chí Minh"],
+      "updateAt": "20-05-2023 16:45:30"
+    },
+    {
+      "idCompany": 3,
+      "name": "Full Stack Developer (MERN)",
+      "tags": ["ReactJS", "NodeJS", "Database", "JavaScript"],
+      "salary": "2000",
+      "description": "Về công ty\nChúng tôi là công ty công nghệ hàng đầu trong lĩnh vực fintech\n\nMô tả công việc\nXây dựng ứng dụng web full stack từ đầu đến cuối\nLàm việc với MERN stack (MongoDB, Express, React, Node)\nTối ưu hóa performance và user experience\nHợp tác với team design và product\n\nYêu cầu\n3+ năm kinh nghiệm Full Stack\nThành thạo React và NodeJS\nKinh nghiệm với MongoDB\nGiỏi communication và teamwork",
+      "status": true,
+      "createAt": "01-06-2023 14:20:10",
+      "id": 3,
+      "city": ["Hồ Chí Minh"],
+      "updateAt": "10-06-2023 11:30:22"
+    },
+    {
+      "idCompany": 1,
+      "name": "Mobile Developer (React Native)",
+      "tags": ["ReactJS", "JavaScript", "TypeScript"],
+      "salary": "1800",
+      "description": "Vị trí tuyển dụng\nMobile Developer chuyên phát triển ứng dụng React Native\n\nMô tả công việc\nPhát triển ứng dụng mobile đa nền tảng\nTối ưu performance cho iOS và Android\nIntegrate với các API backend\nDebug và fix bugs\n\nYêu cầu\n2+ năm kinh nghiệm React Native\nHiểu biết về iOS và Android native\nKinh nghiệm publish app lên store\nƯu tiên có kinh nghiệm với Redux, Redux Saga",
+      "status": true,
+      "createAt": "18-06-2023 10:15:45",
+      "id": 4,
+      "city": ["Đà Nẵng", "Hà Nội"],
+      "updateAt": "25-06-2023 09:20:15"
+    },
+    {
+      "idCompany": 4,
+      "name": "DevOps Engineer",
+      "tags": ["Python", "Database", "JSON"],
+      "salary": "2200",
+      "description": "Trách nhiệm công việc\nQuản lý và maintain infrastructure\nXây dựng CI/CD pipeline\nMonitoring và optimize system performance\nĐảm bảo security và reliability\n\nYêu cầu ứng viên\n3+ năm kinh nghiệm DevOps\nThành thạo AWS/Azure/GCP\nKinh nghiệm với Docker, Kubernetes\nBiết về monitoring tools (Prometheus, Grafana)\n\nChế độ đãi ngộ\nLương hấp dẫn + bonus\nĐào tạo certification\n16 ngày phép/năm\nTeam building quý",
+      "status": true,
+      "createAt": "05-07-2023 08:40:20",
+      "id": 5,
+      "city": ["Hà Nội"],
+      "updateAt": "12-07-2023 15:30:40"
+    },
+    {
+      "idCompany": 2,
+      "name": "UI/UX Designer",
+      "tags": ["HTML", "CSS"],
+      "salary": "1200",
+      "description": "Mô tả công việc\nThiết kế giao diện web/mobile app\nTạo wireframe, prototype, mockup\nPhối hợp với developer implement design\nResearch user behavior và cải thiện UX\n\nYêu cầu\n2+ năm kinh nghiệm UI/UX\nThành thạo Figma, Adobe XD\nHiểu biết về responsive design\nCó portfolio ấn tượng\n\nQuyền lợi\nMôi trường sáng tạo\nTrang thiết bị hiện đại\n13 tháng lương\nTeam building hàng quý",
+      "status": true,
+      "createAt": "22-07-2023 11:25:30",
+      "id": 6,
+      "city": ["Hồ Chí Minh", "Đà Nẵng"],
+      "updateAt": "01-08-2023 10:15:45"
+    },
+    {
+      "idCompany": 5,
+      "name": "Data Engineer",
+      "tags": ["Python", "Database", "JSON"],
+      "salary": "2500",
+      "description": "Job Description\nXây dựng data pipeline và ETL processes\nQuản lý data warehouse\nOptimize data processing performance\nPhối hợp với Data Science team\n\nRequirements\n3+ years experience in Data Engineering\nStrong in Python, SQL\nExperience with Spark, Airflow\nKnowledge of cloud platforms (AWS, GCP)\n\nBenefits\nCompetitive salary and bonuses\nModern tech stack\nFlexible working hours\nHealth insurance for family",
+      "status": true,
+      "createAt": "10-08-2023 09:50:15",
+      "id": 7,
+      "city": ["Hà Nội", "Hồ Chí Minh"],
+      "updateAt": "18-08-2023 14:20:30"
+    },
+    {
+      "idCompany": 3,
+      "name": "QA/QC Engineer (Automation)",
+      "tags": ["JavaScript", "Python"],
+      "salary": "1300",
+      "description": "Nhiệm vụ chính\nViết automation test scripts\nThực hiện manual testing khi cần\nBáo cáo bugs và theo dõi fix\nTham gia review requirements\n\nYêu cầu\n2+ năm kinh nghiệm QA\nBiết automation tools (Selenium, Cypress)\nKinh nghiệm API testing\nTư duy logic tốt, cẩn thận\n\nĐãi ngộ\nLương thỏa thuận theo năng lực\n12 ngày phép\nBảo hiểm đầy đủ\nHọc hỏi công nghệ mới",
+      "status": true,
+      "createAt": "28-08-2023 13:15:25",
+      "id": 8,
+      "city": ["Đà Nẵng"],
+      "updateAt": "05-09-2023 16:40:50"
+    },
+    {
+      "idCompany": 6,
+      "name": "System Analyst",
+      "tags": ["Database", "JSON"],
+      "salary": "1700",
+      "description": "Công việc\nPhân tích yêu cầu nghiệp vụ\nThiết kế giải pháp hệ thống\nViết tài liệu kỹ thuật\nPhối hợp giữa business và technical team\n\nYêu cầu\n3+ năm kinh nghiệm BA/SA\nKỹ năng phân tích tốt\nGiỏi communication\nBiết UML, BPMN\n\nLợi ích\nDự án lớn, ổn định\nCơ hội thăng tiến\n15 ngày phép\nLương tháng 13",
+      "status": true,
+      "createAt": "12-09-2023 10:30:00",
+      "id": 9,
+      "city": ["Hà Nội"],
+      "updateAt": "20-09-2023 11:45:20"
+    },
+    {
+      "idCompany": 4,
+      "name": "Security Engineer",
+      "tags": ["Python", "JavaScript", "Database"],
+      "salary": "2300",
+      "description": "Mô tả công việc\nĐảm bảo security cho hệ thống\nThực hiện security audit\nPhát triển security tools\nResearch về các mối đe dọa mới\n\nYêu cầu\n3+ năm kinh nghiệm Security\nHiểu biết về OWASP Top 10\nKinh nghiệm penetration testing\nCó certification (CEH, OSCP) là lợi thế\n\nChế độ\nLương cao\nThưởng dự án\nĐào tạo security courses\nLàm việc với tech mới nhất",
+      "status": true,
+      "createAt": "25-09-2023 15:20:40",
+      "id": 10,
+      "city": ["Hồ Chí Minh"],
+      "updateAt": "03-10-2023 09:30:15"
+    },
+    {
+      "idCompany": 5,
+      "name": "Tech Lead (VueJS)",
+      "tags": ["VueJS", "JavaScript", "TypeScript"],
+      "salary": "3000",
+      "description": "Job Responsibilities\nLead technical team (5-7 members)\nArchitect and develop complex features\nCode review and mentoring\nCoordinate with other teams\n\nRequirements\n5+ years Vue.js experience\n2+ years leadership experience\nStrong in system design\nExcellent problem-solving skills\n\nWhat We Offer\nVery competitive package\nLeadership opportunities\nStock options\nFlexible work arrangement\nAnnual trips abroad",
+      "status": true,
+      "createAt": "08-10-2023 11:40:50",
+      "id": 11,
+      "city": ["Hà Nội", "Hồ Chí Minh"],
+      "updateAt": "15-10-2023 14:25:30"
+    },
+    {
+      "idCompany": 6,
+      "name": "Product Manager (Tech)",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "salary": "2800",
+      "description": "Trách nhiệm\nXây dựng product roadmap\nQuản lý product backlog\nPhối hợp với các team\nPhân tích data và metrics\n\nYêu cầu\n3+ năm kinh nghiệm PM\nHiểu biết về tech và development\nKỹ năng leadership tốt\nData-driven mindset\n\nQuyền lợi\nPackage hấp dẫn\nImpact lớn đến product\nTeam giỏi, nhiệt huyết\n17 ngày phép/năm\nĐào tạo PM skills",
+      "status": true,
+      "createAt": "20-10-2023 09:15:20",
+      "id": 12,
+      "city": ["Hồ Chí Minh", "Đà Nẵng"],
+      "updateAt": "28-10-2023 16:50:45"
+    }
+  ],
+  "tags": [
+    {
+      "key": 1,
+      "value": "HTML"
+    },
+    {
+      "key": 2,
+      "value": "CSS"
+    },
+    {
+      "key": 3,
+      "value": "JavaScript"
+    },
+    {
+      "key": 4,
+      "value": "Database"
+    },
+    {
+      "key": 5,
+      "value": "JSON"
+    },
+    {
+      "key": 6,
+      "value": "PHP"
+    },
+    {
+      "key": 7,
+      "value": "Python"
+    },
+    {
+      "key": 8,
+      "value": "ReactJS"
+    },
+    {
+      "key": 9,
+      "value": "Angular"
+    },
+    {
+      "key": 10,
+      "value": "TypeScript"
+    },
+    {
+      "key": 11,
+      "value": "NodeJS"
+    },
+    {
+      "key": 12,
+      "value": "VueJS"
+    }
+  ],
+  "company": [
+    {
+      "idCompany": 1,
+      "name": "VNTech Solutions",
+      "numberEmployees": 850,
+      "address": "Tầng 10, Tòa nhà FPT, Hà Nội",
+      "idCity": 1
+    },
+    {
+      "idCompany": 2,
+      "name": "Sài Gòn Digital",
+      "numberEmployees": 1500,
+      "address": "45 Nguyễn Huệ, Quận 1, TP.HCM",
+      "idCity": 2
+    },
+    {
+      "idCompany": 3,
+      "name": "Hà Nội AI Hub",
+      "numberEmployees": 320,
+      "address": "Lô 32, Khu Công nghệ Cao, Hà Nội",
+      "idCity": 1
+    },
+    {
+      "idCompany": 4,
+      "name": "IT Delta Force",
+      "numberEmployees": 610,
+      "address": "200 Cộng Hòa, Tân Bình, TP.HCM",
+      "idCity": 2
+    },
+    {
+      "idCompany": 5,
+      "name": "Đà Nẵng Cloud",
+      "numberEmployees": 1100,
+      "address": "Tầng 5, Tòa nhà VNPT, Đà Nẵng",
+      "idCity": 3
+    },
+    {
+      "idCompany": 6,
+      "name": "Web Savvy Vietnam",
+      "numberEmployees": 180,
+      "address": "15 Trần Duy Hưng, Cầu Giấy, Hà Nội",
+      "idCity": 1
+    },
+    {
+      "idCompany": 7,
+      "name": "Mobile Pro VN",
+      "numberEmployees": 490,
+      "address": "32 Bến Chương Dương, Q.1, TP.HCM",
+      "idCity": 2
+    },
+    {
+      "idCompany": 8,
+      "name": "Quantum IT Lab",
+      "numberEmployees": 750,
+      "address": "Tòa nhà Viettel, Hà Nội",
+      "idCity": 1
+    },
+    {
+      "idCompany": 9,
+      "name": "Agile Development Group",
+      "numberEmployees": 250,
+      "address": "Khu Công nghệ Phần mềm, Quang Trung, TP.HCM",
+      "idCity": 2
+    },
+    {
+      "idCompany": 10,
+      "name": "Ecom Viet",
+      "numberEmployees": 2100,
+      "address": "Tầng 12, Tòa nhà Indochina, Đà Nẵng",
+      "idCity": 3
+    },
+    {
+      "idCompany": 11,
+      "name": "Network One Vietnam",
+      "numberEmployees": 530,
+      "address": "78 Lê Văn Lương, Thanh Xuân, Hà Nội",
+      "idCity": 1
+    },
+    {
+      "idCompany": 12,
+      "name": "VR Game Studio",
+      "numberEmployees": 290,
+      "address": "Khu Đô thị mới, Thủ Đức, TP.HCM",
+      "idCity": 2
+    }
+  ]
+}
