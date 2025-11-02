@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAPI } from "../../../utils/getAPI";
+import { getAPI } from "../../../utils/fetchAPI";
 import Jobs from "../Job";
 import { Spin, Pagination } from "antd";
 import './style.scss';

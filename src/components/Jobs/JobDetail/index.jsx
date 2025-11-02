@@ -13,7 +13,7 @@ import {
   Form,
   Input,
   message,
-  Select,
+  Select
 } from "antd";
 import {
   DollarOutlined,
@@ -25,7 +25,7 @@ import {
   CheckCircleOutlined,
 } from "@ant-design/icons";
 import { useParams } from "react-router-dom";
-import { getAPI } from "../../../utils/getAPI";
+import { getAPI, postAPI } from "../../../utils/fetchAPI";
 import TextArea from "antd/es/input/TextArea";
 
 const { Title, Paragraph, Text } = Typography;
@@ -35,6 +35,7 @@ export default function JobDetail() {
   const jobId = useParams();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [form] = Form.useForm();
+  const [messageApi, contextHolder] = message.useMessage();
 
   useEffect(() => {
     const fetchJobData = async () => {
@@ -193,24 +194,24 @@ export default function JobDetail() {
   const handleSubmit = async (values) => {
     try {
       // Thêm thông tin bổ sung
-      const applicationData = {
+      const data = {
+        idJob: jobId.id,
+        idCompany: jobData.idCompany,
         ...values,
         statusRead: false,
         createAt: new Date().toISOString(),
-        jobId: jobId.id,
       };
-
-      console.log("Application Data:", applicationData);
-
-      // TODO: Gọi API để submit form
-      // await postAPI('http://localhost:3001/applications', applicationData);
-
-      message.success("Ứng tuyển thành công!");
-      setIsModalOpen(false);
-      form.resetFields();
+      console.log(data);
+      const postCV = await postAPI(`http://localhost:3001/cv`, data);
+      if(postCV){
+        handleCancel();
+        messageApi.success("Gửi CV thành công!")
+      }
+      else{
+        message.error("Có lỗi xảy ra, vui lòng thử lại!");
+      }
     } catch (error) {
       message.error("Có lỗi xảy ra, vui lòng thử lại!");
-      console.error(error);
     }
   };
 
@@ -221,6 +222,7 @@ export default function JobDetail() {
         padding: "40px 20px",
       }}
     >
+      {contextHolder}
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         {/* Header Card */}
         <Card
@@ -427,6 +429,8 @@ export default function JobDetail() {
           </Col>
         </Row>
       </div>
+
+      {/* Model upload CV */}
       <Modal
         title={
           <Title level={3} style={{ margin: 0 }}>

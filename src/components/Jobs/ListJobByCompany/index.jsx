@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getAPI } from "../../../utils/getAPI";
+import { getAPI } from "../../../utils/fetchAPI";
 import Jobs from "../Job";
 import './style.scss';
 

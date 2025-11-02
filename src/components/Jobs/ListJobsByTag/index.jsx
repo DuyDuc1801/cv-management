@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import './style.scss';
 import { useEffect, useState } from 'react';
-import { getAPI } from '../../../utils/getAPI';
+import { getAPI } from '../../../utils/fetchAPI';
 import Jobs from '../Job';
 import { Tag } from 'antd';
 function ListJobsByTag() {

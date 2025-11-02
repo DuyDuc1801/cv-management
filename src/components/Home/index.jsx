@@ -1,6 +1,6 @@
 import { Avatar, Button, Card, Form, Input, Select, Tag } from "antd";
 import { useEffect, useState } from "react";
-import { getAPI } from "../../utils/getAPI";
+import { getAPI } from "../../utils/fetchAPI";
 import {
   SearchOutlined,
   EnvironmentOutlined,
