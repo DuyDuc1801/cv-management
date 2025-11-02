@@ -9,6 +9,11 @@ import {
   Divider,
   Row,
   Col,
+  Modal,
+  Form,
+  Input,
+  message,
+  Select,
 } from "antd";
 import {
   DollarOutlined,
@@ -21,23 +26,23 @@ import {
 } from "@ant-design/icons";
 import { useParams } from "react-router-dom";
 import { getAPI } from "../../../utils/getAPI";
+import TextArea from "antd/es/input/TextArea";
 
 const { Title, Paragraph, Text } = Typography;
 
 export default function JobDetail() {
   const [jobData, setJobData] = useState({});
   const jobId = useParams();
-  console.log(jobId);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [form] = Form.useForm();
 
   useEffect(() => {
     const fetchJobData = async () => {
       const job = await getAPI(`http://localhost:3001/jobs/${jobId.id}`);
       setJobData(job);
-      console.log(job);
     };
     fetchJobData();
   }, [jobId]);
-
 
   const formatDescription = (desc) => {
     if (!desc) return null;
@@ -67,7 +72,7 @@ export default function JobDetail() {
     ];
 
     const lines = desc.split("\n").filter((line) => line.trim() !== "");
-    
+
     const sections = [];
     let currentSection = null;
 
@@ -176,11 +181,43 @@ export default function JobDetail() {
     ));
   };
 
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+    form.resetFields();
+  };
+
+  const handleSubmit = async (values) => {
+    try {
+      // Thêm thông tin bổ sung
+      const applicationData = {
+        ...values,
+        statusRead: false,
+        createAt: new Date().toISOString(),
+        jobId: jobId.id,
+      };
+
+      console.log("Application Data:", applicationData);
+
+      // TODO: Gọi API để submit form
+      // await postAPI('http://localhost:3001/applications', applicationData);
+
+      message.success("Ứng tuyển thành công!");
+      setIsModalOpen(false);
+      form.resetFields();
+    } catch (error) {
+      message.error("Có lỗi xảy ra, vui lòng thử lại!");
+      console.error(error);
+    }
+  };
+
   return (
     <div
       style={{
         minHeight: "100vh",
-        //   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         padding: "40px 20px",
       }}
     >
@@ -248,6 +285,7 @@ export default function JobDetail() {
                   type="primary"
                   size="large"
                   block
+                  onClick={showModal}
                   style={{
                     height: 48,
                     fontSize: 16,
@@ -379,6 +417,7 @@ export default function JobDetail() {
               <Button
                 type="primary"
                 block
+                onClick={showModal}
                 size="large"
                 style={{ borderRadius: 8 }}
               >
@@ -388,6 +427,109 @@ export default function JobDetail() {
           </Col>
         </Row>
       </div>
+      <Modal
+        title={
+          <Title level={3} style={{ margin: 0 }}>
+            Ứng Tuyển Vị Trí: {jobData.name}
+          </Title>
+        }
+        open={isModalOpen}
+        onCancel={handleCancel}
+        footer={null}
+        width={700}
+      >
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={handleSubmit}
+          autoComplete="off"
+        >
+          <Form.Item
+            label="Họ và Tên"
+            name="name"
+            rules={[
+              { required: true, message: "Vui lòng nhập họ tên!" },
+              { min: 2, message: "Họ tên phải có ít nhất 2 ký tự!" },
+            ]}
+          >
+            <Input placeholder="Nguyễn Văn A" size="large" />
+          </Form.Item>
+
+          <Form.Item
+            label="Số Điện Thoại"
+            name="phone"
+            rules={[
+              { required: true, message: "Vui lòng nhập số điện thoại!" },
+              {
+                pattern: /^[0-9]{10,11}$/,
+                message: "Số điện thoại không hợp lệ!",
+              },
+            ]}
+          >
+            <Input placeholder="0987654321" size="large" />
+          </Form.Item>
+
+          <Form.Item
+            label="Email"
+            name="email"
+            rules={[
+              { required: true, message: "Vui lòng nhập email!" },
+              { type: "email", message: "Email không hợp lệ!" },
+            ]}
+          >
+            <Input placeholder="example@email.com" size="large" />
+          </Form.Item>
+
+          <Form.Item
+            label="Thành Phố"
+            name="city"
+            rules={[{ required: true, message: "Vui lòng nhập thành phố!" }]}
+          >
+            <Select placeholder="--- Chọn thành phố ---">
+              {jobData.city ? (
+                jobData.city.map((ct, index) => 
+                  <Select.Option key={index} value={ct}>{ct}</Select.Option>
+                )
+              ) : ("Loading...")}
+            </Select>
+          </Form.Item>
+
+          <Form.Item
+            label="Link Project/Portfolio"
+            name="linkProject"
+            rules={[{ type: "url", message: "Link không hợp lệ!" }]}
+          >
+            <Input placeholder="https://github.com/username" size="large" />
+          </Form.Item>
+
+          <Form.Item
+            label="Giới Thiệu Bản Thân"
+            name="description"
+            rules={[
+              { required: true, message: "Vui lòng giới thiệu về bản thân!" },
+              { min: 50, message: "Vui lòng nhập ít nhất 50 ký tự!" },
+            ]}
+          >
+            <TextArea
+              rows={6}
+              placeholder="Hãy giới thiệu về bản thân, kinh nghiệm làm việc, và lý do bạn phù hợp với vị trí này..."
+              showCount
+              maxLength={1000}
+            />
+          </Form.Item>
+
+          <Form.Item style={{ marginBottom: 0 }}>
+            <Space style={{ width: "100%", justifyContent: "flex-end" }}>
+              <Button onClick={handleCancel} size="large">
+                Hủy
+              </Button>
+              <Button type="primary" htmlType="submit" size="large">
+                Gửi Hồ Sơ
+              </Button>
+            </Space>
+          </Form.Item>
+        </Form>
+      </Modal>
     </div>
   );
 }
