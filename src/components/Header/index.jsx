@@ -1,7 +1,7 @@
 import { Button } from "antd";
 import "./style.scss";
 import { ReconciliationOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
@@ -17,9 +17,11 @@ function Header() {
           color="primary"
           variant="outlined"
         >
-          Đăng nhập
+          <NavLink to={"/login"}>Đăng nhập</NavLink>
         </Button>
-        <Button type="primary">Đăng ký</Button>
+        <Button type="primary">
+          <NavLink to={"/register"}>Đăng ký</NavLink>
+        </Button>
       </div>
     </div>
   );

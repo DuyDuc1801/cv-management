@@ -1,8 +1,11 @@
+import Login from "../components/Auth/Login";
+import Register from "../components/Auth/Register";
 import Home from "../components/Home";
 import AllJobs from "../components/Jobs/AllJob";
 import JobDetail from "../components/Jobs/JobDetail";
 import ListJobsByCompany from "../components/Jobs/ListJobByCompany";
 import ListJobsByTag from "../components/Jobs/ListJobsByTag";
+import LayoutAdmin from "../components/LayoutAdmin";
 import LayoutDefault from "../components/LayoutDefault";
 
 export const routers = [
@@ -15,7 +18,15 @@ export const routers = [
         element: <Home/>,
       },
       {
-        path: "/Jobs",
+        path: "login",
+        element: <Login/>
+      },
+      {
+        path: "register",
+        element: <Register/>
+      },
+      {
+        path: "Jobs",
         children: [
           {
             index: true,
@@ -42,6 +53,13 @@ export const routers = [
       },
 
     ],
+  },
+  {
+    path: '/admin',
+    element: <LayoutAdmin/>,
+    children: [
+
+    ]
   },
   {
     path: "*",
