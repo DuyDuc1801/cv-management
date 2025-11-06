@@ -13,6 +13,9 @@ function Login() {
         if(check){
             console.log("login is ok");
             nav("/admin");
+            document.cookie=`email=${check.email}`;
+            document.cookie=`phone=${check.phone}`;
+            document.cookie=`fullName=${check.fullName}`;
         }
         else{
             console.log("login is fail");
