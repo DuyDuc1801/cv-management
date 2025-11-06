@@ -5,6 +5,7 @@ import AllJobs from "../components/Jobs/AllJob";
 import JobDetail from "../components/Jobs/JobDetail";
 import ListJobsByCompany from "../components/Jobs/ListJobByCompany";
 import ListJobsByTag from "../components/Jobs/ListJobsByTag";
+import ListJobSearch from "../components/Jobs/ListJobSearch";
 import LayoutAdmin from "../components/LayoutAdmin";
 import LayoutDefault from "../components/LayoutDefault";
 
@@ -41,6 +42,10 @@ export const routers = [
             element: <ListJobsByTag />
           }
         ]
+      },
+      {
+        path: "search-result",
+        element: <ListJobSearch/>
       },
       {
         path: "/Company",

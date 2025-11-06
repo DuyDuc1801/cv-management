@@ -12,9 +12,9 @@ function LayoutDefault() {
 
   return (
     <div className="layoutdefault">
-    <div className="layout-default__header">
-        <Headers />
-    </div>
+      <div className="layout-default__header">
+          <Headers />
+      </div>
       <div className="layout-default__content">
         <Outlet />
       </div>

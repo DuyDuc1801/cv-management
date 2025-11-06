@@ -8,14 +8,18 @@ import {
   RightOutlined,
 } from "@ant-design/icons";
 import "./style.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Jobs from "../Jobs/Job";
+import { useDispatch } from "react-redux";
+import { getInputSearch } from "../../actions/getInputSearch";
 
 function Home() {
   const [cities, setCities] = useState([]);
   const [data, setData] = useState([]);
   const [tags, setTags] = useState([]);
   const [companies, setCompanies] = useState([]);
+  const dispatch = useDispatch();
+  const nav = useNavigate();
   useEffect(() => {
     const getData = async () => {
       const listCity = await getAPI("http://localhost:3001/cites");
@@ -43,6 +47,9 @@ function Home() {
 
   const handleSearch = (e) => {
     console.log(e);
+    dispatch(getInputSearch(e));
+    nav('/search-result');
+
   }
 
   return (
