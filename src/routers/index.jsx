@@ -1,5 +1,6 @@
 import Login from "../components/Auth/Login";
 import Register from "../components/Auth/Register";
+import AllCompanies from "../components/Company/AllCompany";
 import Home from "../components/Home";
 import AllJobs from "../components/Jobs/AllJob";
 import JobDetail from "../components/Jobs/JobDetail";
@@ -53,6 +54,10 @@ export const routers = [
           {
             path: ":idCompany",
             element: <ListJobsByCompany />
+          },
+          {
+            path: "all",
+            element: <AllCompanies/>
           }
         ]
       },

@@ -196,7 +196,7 @@ function LayoutAdmin() {
                     padding: 0,
                   }}
                 >
-                  {currentAdmin.fullName}
+                  {currentAdmin ? currentAdmin.fullName : "Admin"}
                 </p>
                 <p
                   style={{
@@ -206,7 +206,7 @@ function LayoutAdmin() {
                     padding: 0,
                   }}
                 >
-                  {currentAdmin.email}
+                  {currentAdmin ? currentAdmin.email : "admin@test.com"}
                 </p>
               </div>
               <div

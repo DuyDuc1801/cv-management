@@ -6,16 +6,17 @@ import './style.scss';
 
 function ListJobsByCompany() {
     const idCompany = useParams();
-    console.log(idCompany);
     const [jobs, setJobs] = useState([]);
+    const [company, setCompany] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         const fetchData = async () => {
             const listJob = await getAPI(`http://localhost:3001/jobs?idCompany=${idCompany.idCompany}`);
-            const company = await getAPI("http://localhost:3001/company");
+            const allCompany = await getAPI("http://localhost:3001/company");
+            const myCompany = allCompany.find(c => c.idCompany === parseInt(idCompany.idCompany));
             const result = listJob
                 .map((job) => {
-                const companyInfo = company.find(
+                const companyInfo = allCompany.find(
                     (c) => job.idCompany === c.idCompany
                 );
                 return {
@@ -24,8 +25,8 @@ function ListJobsByCompany() {
                 };
                 });
             setJobs(result);
+            setCompany(myCompany);
             setLoading(false);
-            console.log(result);
         } 
         fetchData();
 
@@ -35,14 +36,18 @@ function ListJobsByCompany() {
         <>
             <div className="container">
                 {loading ? ("Loading...") : (
-                    <>
-                        <h3>Các vị trí cần tuyển dụng của {jobs[0].company.name}</h3>
-                        <div className="listJobByCompany">
-                            {jobs.map(job => (
-                                <Jobs className="listJobByCompany__item" key={job.id} job={job}/>
-                            ))}
-                        </div>
-                    </>
+                    jobs.length === 0 ? (
+                        <h3>Công ty {company.name} hiện chưa có vị trí nào cần tuyển dụng!</h3>
+                    ) : (
+                        <>
+                            <h3>Các vị trí cần tuyển dụng của {jobs[0].company.name}</h3>
+                            <div className="listJobByCompany">
+                                {jobs.map(job => (
+                                    <Jobs className="listJobByCompany__item" key={job.id} job={job}/>
+                                ))}
+                            </div>
+                        </>
+                    )
                 )}
                 
             </div>
